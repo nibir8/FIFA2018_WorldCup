@@ -1,0 +1,78 @@
+  
+svg
+{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+.water {
+  fill: #00248F;
+}
+
+.land {
+  fill: #595959;
+  stroke: #f2f2f2;
+  stroke-width: 0.10px;
+}
+
+
+
+.focused {
+  fill:#ccffff;
+}
+
+select {
+  position: absolute;
+  top: 120%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+  border: solid #ccc 1px;
+  padding: 3px;
+  box-shadow: inset 2px 2px 2px #ddd8dc;
+  z-index: +1;
+}
+
+.countryTooltip {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  background: #fff;
+  padding: 5px;
+  text-align: left;
+  border: solid #ccc 1px;
+  color: #666;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+.Earthglobe
+{
+  width: 1000vh;
+  height: 130vh;
+  margin-top: 15vh;
+}
+.radar
+{
+  width: 1000vh;
+  height: 100vh;
+  margin-top: 10vh;
+}
+#pointstable {
+     float: right;
+     width: 100%;
+     background: #fff;
+     min-height: auto;
+     padding: 10vh;
+     box-shadow: 0 10px 20px -25px rgba(50,50,50,1);
+     border: solid #e1e1e1 1px;
+     margin-bottom: 25px;
+     z-index: +1;
+   }
+   .Subscribe
+{
+  top:50%;
+  left:50%;
+  
+}

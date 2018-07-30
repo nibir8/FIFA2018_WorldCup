@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FIFA World Cup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+   <link rel="stylesheet" href="{{url_for('static', filename='css/rad.css') }}">
+   <script src="http://d3js.org/d3.v4.min.js"></script>
+   <script src="http://d3js.org/topojson.v1.min.js"></script>
+   <script src="http://d3js.org/queue.v1.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="{{url_for('static', filename='js/player_info.js') }}"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">FIFA</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="predict.html">Predict</a></li>
+		<li><a href="videos.html">Videos</a></li>
+        <li><a href="score.html">Score</a></li>
+		<li class="active"><a href="visual1.html">Player Statistics</a></li>
+        <li><a href="visual2.html">Team Statistics</a></li>
+		<li><a href="destination.html">Match Location</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div style="text-align:center; margin-top:2%;">
+<button  id = "K. Mbappé" class="player">K. Mbappé</button>
+<button  id = "Neymar" class="player">Neymar</button>
+<button  id = "Cristiano Ronaldo" class="player">C. Ronaldo</button>
+<button  id = "L. Messi" class="player">L. Messi</button>
+<button  id = "E. Hazard" class="player">E. Hazard</button>
+<button  id = "P. Pogba" class="player">P. Pogba</button>
+<button  id = "H. Kane" class="player">H. Kane</button>
+<button  id = "L. Modrić" class="player">L. Modric</button>
+<button  id = "K. De Bruyne" class="player">K. De Bruyne</button>
+<button  id = "E. Cavani" class="player">E. Cavani</button>
+<button  id = "Sergio Ramos" class="player">S. Ramos</button>
+<button  id = "B. Pavard" class="player">B. Pavard</button>
+</div>
+<div style=" margin-top: 10px">
+        <table id="player_table" style="width:100%" border="5">
+        <tr>
+            <td>Acceleration</td>
+            <td>Age</td>
+            <td>Aggression</td>
+            <td>Agility</td>
+            <td>Balance</td>
+            <td>Ball Control</td>
+            <td>Club</td>
+            <td>Composure</td>
+            <td>Crossing</td>
+            <td>Curve</td>
+            <td>Dribbling</td>
+            <td>Finishing</td>
+            <td>Heading Accuracy</td>
+            <td>Jumping</td>
+            <td>Long Passing</td>
+            <td>Long Shots	</td>
+            <td>Name</td>
+            <td>Nationality</td>
+            <td>Overall</td>
+            <td>Penalties</td>
+            <td>Photo</td>
+            <td>Positioning</td>
+            <td>Reactions</td>
+            <td>Stamina</td>
+            <td>Strength</td>
+            <td>Value</td>
+            <td>Vision</td>
+            <td>Volley</td>
+            <td>Wage</td>
+            <td>index</td>
+        </tr>
+        </table>
+</div>
+
+<!--<section class = "radar">-->
+<!--<script src = "{{url_for('static', filename='js/radarchart.js') }}">-->
+
+
+<!--</script>-->
+<!--</section>-->
+<!--<section>-->
+         <!--<div class="col-md-6 col-md-6 col-xs-12" id = "pointstable" style="display: none; "><span class="float-right">-->
+                  <!--<h4>Player Statistics</h4>-->
+                  <!--<aside id="sidebar2" >-->
+                     <!--<div class="feature-matchs">-->
+                        <!--<table class="table table-bordered table-hover">-->
+                           <!--<thead>-->
+                              <!--<tr>-->
+                                 <!--<th>#</th>-->
+                                 <!--<th>Year</th>-->
+                                 <!--<th>Played</th>-->
+                                 <!--<th>Goals</th>-->
+                                 <!--<th>Assist</th>-->
+                              <!--</tr>-->
+                           <!--</thead>-->
+                           <!--<tbody>-->
+                              <!--<tr>-->
+                                 <!--<td>1</td>-->
+                                 <!--<td>2014</td>-->
+                                 <!--<td>20</td>-->
+                                 <!--<td>12</td>-->
+                                 <!--<td>8</td>-->
+                              <!--</tr>-->
+                              <!--<tr>-->
+                                 <!--<td>2</td>-->
+                                 <!--<td>2010</td>-->
+                                 <!--<td>20</td>-->
+                                 <!--<td>10</td>-->
+                                 <!--<td>10</td>-->
+                              <!--</tr>-->
+                              <!--<tr>-->
+                                 <!--<td>3</td>-->
+                                 <!--<td>2006</td>-->
+                                 <!--<td>20</td>-->
+                                 <!--<td>15</td>-->
+                                 <!--<td>05</td>-->
+                              <!--</tr>-->
+                              <!--<tr>-->
+                                 <!--<td>4</td>-->
+                                 <!--<td>2002</td>-->
+                                 <!--<td>20</td>-->
+                                 <!--<td>11</td>-->
+                                 <!--<td>5</td>-->
+                              <!--</tr>-->
+                              <!--<tr>-->
+                                 <!--<td>5</td>-->
+                                 <!--<td>1998</td>-->
+                                 <!--<td>25</td>-->
+                                 <!--<td>06</td>-->
+                                 <!--<td>15</td>-->
+                              <!--</tr>-->
+                              <!--<tr>-->
+                                 <!--<td>1</td>-->
+                                 <!--<td>1994</td>-->
+                                 <!--<td>20</td>-->
+                                 <!--<td>12</td>-->
+                                 <!--<td>6</td>-->
+                              <!--</tr>-->
+                           <!--</tbody>-->
+                        <!--</table>-->
+                     <!--</div>-->
+                  <!--</aside>-->
+            <!--</div>-->
+      <!--</section>-->
+
+
+
+</body>
+</html>

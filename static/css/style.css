@@ -1,0 +1,171 @@
+html,body {
+	margin: 0;
+	font-size: 100%;
+	font-family: 'Merriweather Sans', sans-serif;
+	background: #fff;
+}
+
+body a {
+	text-decoration: none;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+
+
+.signin-form {
+	text-align: center;
+}
+
+.signin-form h3,
+h3.sign {
+	font-size: 1.6em;
+	color: #212121;
+	margin: 0em 0 0.8em 0;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.signin-form h3 span {
+	color: #67e1ff;
+}
+
+
+.signin-form input[type="email"],
+.signin-form input[type="text"],
+.signin-form input[type="password"],
+.signin-form textarea {
+	width: 100%;
+	padding: 0.8em 1em 0.8em 1em;
+	font-size: 0.8em;
+	margin: 0.5em 0;
+	outline: none;
+	color: #212121;
+	border: none;
+	border: 1px solid #ccc;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.signin-form input[type="email"] {
+	background: none;
+	display: block;
+}
+
+.signin-form input[type="text"] {
+	background: none;
+	display: block;
+}
+
+.signin-form input[type="password"] {
+	background: none;
+	display: block;
+}
+
+.signin-form ::-webkit-input-placeholder {
+	color: #777 !important;
+}
+
+.signin-form ::-webkit-textarea-placeholder {
+	color: #777 !important;
+}
+
+.signin-form textarea {
+	min-height: 100px;
+}
+
+.signin-form input[type="submit"] {
+	outline: none;
+	padding: 0.7em 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1em;
+	margin-top: 0.5em;
+	border: none;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	cursor: pointer;
+	background: #2f2e2e;
+	box-shadow: 0px 2px 1px rgba(28, 28, 29, 0.42);
+}
+
+.signin-form input[type="submit"]:hover {
+	color: #fff;
+	background: #ff3c41;
+	transition: .5s all;
+	-webkit-transition: .5s all;
+	-moz-transition: .5s all;
+	-o-transition: .5s all;
+	-ms-transition: .5s all;
+}
+
+.signin-form p a {
+	font-size: 0.8em;
+	color: #7b7979;
+	letter-spacing: 1px;
+}
+
+
+.signin-form.profile.join-fm {
+	background: rgba(178, 207, 218, 0.23);
+	padding: 3em 2em 2em 2em;
+	margin-top: 3em;
+	-webkit-box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.66);
+	-moz-box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.66);
+	box-shadow: 10px 10px 5px -9px rgba(0, 0, 0, 0.66);
+}
+
+.signin-form.profile.join-fm input[type="email"],
+.signin-form.profile.join-fm [type="text"],
+.signin-form.profile.join-fm [type="password"] {
+	background: rgba(118, 218, 255, 0.23);
+	padding: 1.2em;
+	text-align: left;
+	border: 1px solid rgba(118, 218, 255, 0.4);
+	letter-spacing: 2px;
+}
+
+.signin-form.profile.join-fm input[type="submit"] {
+	padding: 1.25em 0;
+}
+
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; 
+      margin: auto;
+      min-height:200px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  
+  .videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; 
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
