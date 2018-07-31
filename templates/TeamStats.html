@@ -6,7 +6,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="css/world.css"> 
+   <link rel="stylesheet" href="css/world.css">
    <script src="http://d3js.org/d3.v4.min.js"></script>
    <script src="http://d3js.org/topojson.v1.min.js"></script>
    <script src="http://d3js.org/queue.v1.min.js"></script>
@@ -49,13 +49,15 @@
                                     </div>
                                     <div class="collapse navbar-collapse js-navbar-collapse">
                                        <ul class="nav navbar-nav">
-                                          <li ><a href="../index.html">Home</a></li>
-                                          <li><a href="#">Points Table</a></li>
-                                          <li class="active"><a href="TeamStats.html">Team Stats</a></li>
-                                          <li><a href="#">Match Prediction</a></li>
-                                          <li><a href="#">Match Videos</a></li>
-                                          <li><a href="#">Destination</a></li>
-                                          <li><a href="Subscribe.html">Subscribe</a></li>
+
+                                          <li ><a href="/index">Home</a></li>
+                                          <li class="active"><a href="/join">Join</a></li>
+                                          <li><a href="/predict">Predict</a></li>
+                                            <li><a href="/videos">Videos</a></li>
+                                          <li><a href="/score">Score</a></li>
+                                            <li><a href="/player_stats">Player Statistics</a></li>
+                                          <li class="active"><a href="/team_stats">Team Statistics</a></li>
+                                          <li><a href="/destination">Match Location</a></li>
                                        </ul>
                                     </div>
                                   </nav>
@@ -71,8 +73,8 @@
       </section>
 
       <section class = "Earthglobe">
-      <script> 
-         
+      <script>
+
  var width = 600,
   height = 500,
   sens = 0.25,
@@ -172,7 +174,7 @@
       })();
     });
 
-    function country(cnt, sel) { 
+    function country(cnt, sel) {
       for(var i = 0, l = cnt.length; i < l; i++) {
         if(cnt[i].id == sel.value) {return cnt[i];}
       }

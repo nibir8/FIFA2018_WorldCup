@@ -6,24 +6,33 @@ from info import info
 from flask import jsonify
 app = Flask(__name__)
 
-class App():   
-    
+class App():
+
     @app.route('/')
     def main():
         return render_template('index.html')
 
-    @app.route('/index.html')
+    @app.route('/index')
     def home():
         return render_template('index.html')
 
-    @app.route('/', methods = ['GET','POST'])
-    def index():
-       render_template('index.html')
-    
-    @app.route('/predict.html', methods = ['GET', 'POST'])
+    @app.route('/predict', methods = ['GET', 'POST'])
     def predict():
         return render_template("predict.html")
-    @app.route('/visual1.html', methods = ['GET', 'POST'])
+
+    @app.route('/videos', methods = ['GET', 'POST'])
+    def videos():
+        return render_template("videos.html")
+
+    @app.route('/score', methods = ['GET', 'POST'])
+    def score():
+        return render_template("score.html")
+
+    @app.route('/join', methods = ['GET', 'POST'])
+    def join():
+        return render_template("join.html")
+
+    @app.route('/player_stats', methods = ['GET', 'POST'])
     def player():
         return render_template("visual1.html")
 
@@ -42,8 +51,11 @@ class App():
         print(res)
         return jsonify(res)
 
+    @app.route('/destination', methods = ['GET', 'POST'])
+    def destination():
+        return render_template("destination.html")
 
-    @app.route('/visual2.html', methods = ['GET', 'POST'])
+    @app.route('/team_stats', methods = ['GET', 'POST'])
     def team():
         return render_template("visual2.html")
 
@@ -59,5 +71,3 @@ class App():
         print(predict_this)
         ob = predictor().predict(predict_this)
         return ob
-
-
