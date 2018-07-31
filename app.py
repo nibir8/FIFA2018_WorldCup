@@ -4,7 +4,26 @@ from flask import session,url_for, escape
 from predictor import predictor
 from info import info
 from flask import jsonify
+
+from flask import Flask
+from flaskext.mysql import MySQL
+import unittest
+from flaskext.mysql import MySQL
+
+mysql = MySQL()
+
 app = Flask(__name__)
+app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
+app.config['MYSQL_DATABASE_USER'] = 'rohit'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'B00779758'
+app.config['MYSQL_DATABASE_DB'] = 'rohit'
+
+
+#app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+#app.config['MYSQL_DATABASE_USER'] = 'root'
+#app.config['MYSQL_DATABASE_PASSWORD'] = 'root12345'
+#app.config['MYSQL_DATABASE_DB'] = 'Group20'
+mysql.init_app(app)
 
 class App():
 
@@ -29,7 +48,21 @@ class App():
         return render_template("score.html")
 
     @app.route('/join', methods = ['GET', 'POST'])
-    def join():
+    def Subscribe():
+        if request.method == 'POST':
+            name = request.form["name"]
+            email = request.form['email']
+            password = request.form['password']
+            print "Success"
+            conn = mysql.connect()
+            cur = conn.cursor()
+            sql = "INSERT INTO tbl_users (name,email,password) VALUES (%s, %s,%s)"
+            cur.execute(sql, (name,email,password))
+            conn.commit()
+            conn.close()
+            print "Success"
+
+
         return render_template("join.html")
 
     @app.route('/player_stats', methods = ['GET', 'POST'])
