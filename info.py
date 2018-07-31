@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import re
-
+import json
 
 class info():
 
@@ -17,7 +17,24 @@ class info():
        'Long Passing', 'Long Shots', 'Penalties', 'Positioning',
        'Reactions', 'Stamina','Strength', 'Vision',
        'Volleys']
-        return info[column_names].reset_index().to_dict()
+
+        pinfo =  info[column_names].reset_index().to_dict()
+
+        new_info = {}
+        skills = ['Acceleration','Ball Control','Dribbling','Stamina','Dribbling','Crossing']
+        new_info["id"]=pinfo["Name"][0]
+        list_of_skills = []
+        for skill in skills:
+            d={}
+            d["skill"]=skill
+            d["count"]=pinfo[skill][0]//5
+            list_of_skills.append(d)
+        print(list_of_skills)
+        new_info["data"]=list_of_skills
+        with open('static/js/player_info.json', 'w') as outfile:
+            json.dump(new_info,outfile)
+
+        return json.dumps(new_info)
     def team_info(self,name):
         all_players = pd.read_csv(r"Datasets\world_cup\all_players.csv")
         squad = pd.read_csv(r"Datasets\world_cup\2018_squad.csv")
