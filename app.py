@@ -13,11 +13,11 @@ import json
 
 # mysql = MySQL()
 
-app = Flask(__name__)
-app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
-app.config['MYSQL_DATABASE_USER'] = 'rohit'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'B00779758'
-app.config['MYSQL_DATABASE_DB'] = 'rohit'
+#app = Flask(__name__)
+#app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
+#app.config['MYSQL_DATABASE_USER'] = 'rohit'
+#app.config['MYSQL_DATABASE_PASSWORD'] = 'B00779758'
+#app.config['MYSQL_DATABASE_DB'] = 'rohit'
 
 
 #app.config['MYSQL_DATABASE_HOST'] = 'localhost'
