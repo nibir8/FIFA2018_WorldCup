@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -31,7 +31,7 @@
           <li><a href="/player_stats">Player Statistics</a></li>
         <li><a href="/team_stats">Team Statistics</a></li>
         <li><a href="/destination">Match Location</a></li>
-        
+
       </ul>
     </div>
   </div>
@@ -55,27 +55,27 @@
 			<h1 style="text-align:center;margin-top:4%;margin-bottom:3%;" class="bold">Top Scorers</h1>
 			<div>
 				<div class="col-md-3">
-					<img src="images/t1.jpg" alt=" " class="img-responsive" />
+					<img src="../static/images/t1.jpg" alt=" " class="img-responsive" />
 					<h3>Cristiano Ronaldo </h3>
 					<p>8 goals</p>
 
 
 				</div>
 				<div class="col-md-3 team_grid_info" data-aos="fade-up">
-					<img src="images/t2.jpg" alt=" " class="img-responsive" />
+					<img src="../static/images/t2.jpg" alt=" " class="img-responsive" />
 					<h3>Lionel Messi </h3>
 					<p>6 Goals</p>
 
 
 				</div>
 				<div class="col-md-3 team_grid_info" data-aos="fade-down">
-					<img src="images/t3.jpg" alt=" " class="img-responsive" />
+					<img src="../static/images/t3.jpg" alt=" " class="img-responsive" />
 					<h3>Neymar</h3>
 					<p>5 Goals</p>
 
 				</div>
 				<div class="col-md-3 team_grid_info" data-aos="fade-right">
-					<img src="images/t4.jpg" alt=" " class="img-responsive" />
+					<img src="../static/images/t4.jpg" alt=" " class="img-responsive" />
 					<h3>Harry Kane </h3>
 					<p>3 Goals</p>
 
