@@ -21,7 +21,7 @@ function Player1(){
           .attr("fill","white");
 
 
-d3.json("https://gist.githubusercontent.com/U-Dayy/70e61cd0a913f28e68cfcc29517d9c04/raw/e4ed3f05a172ba3f734aa8e6fd920dab3d850f7c/data.json", function(error, data) {
+d3.json("player_info.json", function(error, data) {
 
   var numBars = data.data.length;
 

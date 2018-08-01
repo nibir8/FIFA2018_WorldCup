@@ -6,11 +6,12 @@ from info import info
 from flask import jsonify
 
 from flask import Flask
-from flaskext.mysql import MySQL
+# from flaskext.mysql import MySQL
 import unittest
-from flaskext.mysql import MySQL
+# from flaskext.mysql import MySQL
+import json
 
-mysql = MySQL()
+# mysql = MySQL()
 
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
@@ -23,7 +24,7 @@ app.config['MYSQL_DATABASE_DB'] = 'rohit'
 #app.config['MYSQL_DATABASE_USER'] = 'root'
 #app.config['MYSQL_DATABASE_PASSWORD'] = 'root12345'
 #app.config['MYSQL_DATABASE_DB'] = 'Group20'
-mysql.init_app(app)
+# mysql.init_app(app)
 
 class App():
 
@@ -53,14 +54,14 @@ class App():
             name = request.form["name"]
             email = request.form['email']
             password = request.form['password']
-            print "Success"
+            # print "Success"
             conn = mysql.connect()
             cur = conn.cursor()
             sql = "INSERT INTO tbl_users (name,email,password) VALUES (%s, %s,%s)"
             cur.execute(sql, (name,email,password))
             conn.commit()
             conn.close()
-            print "Success"
+            # print "Success"
 
 
         return render_template("join.html")
@@ -74,7 +75,7 @@ class App():
         name = request.form["player_name"]
         ob = info()
         res = ob.player_info(name)
-        return jsonify(res)
+        return json.dumps(res)
 
     @app.route('/team_info', methods=['GET', 'POST'])
     def team_info():
@@ -82,7 +83,7 @@ class App():
         ob = info()
         res = ob.team_info(name)
         print(res)
-        return jsonify(res)
+        return json.dumps(res)
 
     @app.route('/destination', methods = ['GET', 'POST'])
     def destination():
