@@ -27,10 +27,10 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
 
-app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
-app.config['MYSQL_DATABASE_USER'] = 'mukherjee'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'B00768437'
-app.config['MYSQL_DATABASE_DB'] = 'mukherjee'
+app.config['MYSQL_DATABASE_HOST'] = 'group20.cpamdpecbjig.us-east-2.rds.amazonaws.com'
+app.config['MYSQL_DATABASE_USER'] = 'group20'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'Nibir88**'
+app.config['MYSQL_DATABASE_DB'] = 'group20'
 
 
 # app.config['MYSQL_DATABASE_HOST'] = 'localhost'
