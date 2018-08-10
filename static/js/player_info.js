@@ -1,7 +1,7 @@
 
 function Player1(player_info){
 
-var width = 960,
+var width = 1060,
     height = 600,
     barHeight = height / 2 - 40;
 
@@ -11,17 +11,14 @@ var color = d3.scale.ordinal()
 var tickValues = [4,8,12,16,20];
 
 var svg = d3.select('body').append("svg")
-    .attr("width", width)
-    .attr("height", height)
-  .append("g")
-    .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
+    .attr("width", '50%')
+    .attr("height", '100%')
+  .attr('viewBox','0 0 '+Math.min(width,height)+' '+Math.min(width,height))
+    .attr('preserveAspectRatio','xMinYMin')
+    .append("g")
+    .attr("transform", "translate(" + Math.min(width,height) /2 + "," + Math.min(width,height)/2 + ")");
 
   svg.selectAll("*").remove();
-      svg.append("rect")
-          .attr("width", "100%")
-          .attr("height", "100%")
-          .attr("fill","white");
-
 // x.domain(player_info.map(function(d) { return d.id}));
 // y.domain([0, d3.max(data, function(d) { return d.data})]);
 //d3.json("static/js/player_info.json", function(error, data) {
@@ -74,8 +71,8 @@ var svg = d3.select('body').append("svg")
 
   lines.append("text")
     .attr("class", "names")
-    .attr("x", function(d, i) { return (barHeight + 15) * Math.sin((i * 2 * Math.PI / numBars)); })
-    .attr("y", function(d, i) { return -(barHeight + 15) * Math.cos((i * 2 * Math.PI / numBars)); })
+    .attr("x", function(d, i) { return (barHeight + 15) * Math.sin((i * 2 * Math.PI / numBars))+5; })
+    .attr("y", function(d, i) { return -(barHeight + 15) * Math.cos((i * 2 * Math.PI / numBars))+5; })
     .attr("text-anchor", function(d,i) {
     if (i===0 || i===numBars/2) {
         return "middle";
