@@ -23,7 +23,8 @@ class info():
         pinfo =  info[column_names].reset_index().to_dict()
 
         new_info = {}
-        skills = ['Acceleration','Crossing','Dribbling','Stamina','Finishing','Stamina']
+        skills = ['Acceleration','Crossing','Dribbling','Balance','Finishing','Stamina']
+        print(pinfo)
         new_info["id"]=pinfo["Name"][0]
         list_of_skills = []
         for skill in skills:
@@ -35,7 +36,7 @@ class info():
         new_info["data"]=list_of_skills
         with open('static/js/player_info.json', 'w') as outfile:
             json.dump(new_info,outfile)
-
+        print(json.dumps(new_info))
         return json.dumps(new_info)
     def team_info(self,name):
         all_players = pd.read_csv(dir_path + "all_players.csv")
