@@ -2,8 +2,8 @@
 svg
 {
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 55%;
+  left: 54%;
   transform: translate(-50%, -50%);
   display: block;
 }
@@ -24,8 +24,9 @@ svg
 }
 
 select {
-  position: absolute;
-  top: 120%;
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 2%;
     left: 50%;
     display: block;
     transform: translate(-50%, -50%);
@@ -49,19 +50,12 @@ select {
 }
 .Earthglobe
 {
-  height: 130vh;
+  height: 65vh;
   margin-top: 15vh;
+  position: relative;
 }
 #pointstable {
-     float: right;
-     width: 100%;
-     background: #fff;
-     min-height: auto;
-     padding: 10vh;
-     box-shadow: 0 10px 20px -25px rgba(50,50,50,1);
-     border: solid #e1e1e1 1px;
-     margin-bottom: 25px;
-     z-index: +1;
+    
    }
    .Subscribe
 {
