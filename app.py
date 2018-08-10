@@ -4,27 +4,40 @@ from flask import session,url_for, escape
 from predictor import predictor
 from info import info
 from flask import jsonify
-
+from smtplib import SMTP
 from flask import Flask
+from flask_mail import Mail, Message
+
 # from flaskext.mysql import MySQL
 import unittest
-# from flaskext.mysql import MySQL
+from flaskext.mysql import MySQL
 import json
 
-# mysql = MySQL()
+mysql = MySQL()
 
-#app = Flask(__name__)
+app =Flask(__name__)
+mail=Mail(app)
+
+app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'noreply.fifa18newsletter@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Nibir88**'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
+
+
 #app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
 #app.config['MYSQL_DATABASE_USER'] = 'rohit'
 #app.config['MYSQL_DATABASE_PASSWORD'] = 'B00779758'
 #app.config['MYSQL_DATABASE_DB'] = 'rohit'
 
 
-#app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-#app.config['MYSQL_DATABASE_USER'] = 'root'
-#app.config['MYSQL_DATABASE_PASSWORD'] = 'root12345'
-#app.config['MYSQL_DATABASE_DB'] = 'Group20'
-# mysql.init_app(app)
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
+app.config['MYSQL_DATABASE_DB'] = 'Group20'
+mysql.init_app(app)
 
 class App():
 
@@ -54,17 +67,20 @@ class App():
             name = request.form["name"]
             email = request.form['email']
             password = request.form['password']
-            # print "Success"
+            mailSubject = "FIFA Newsletter Subscription"
+            mailBody = "Congratulations "+name+"!! You have subscribed to the FIFA Newsletter. Your username is : "+email+" and password is : "+password
+            msg = Message(mailSubject, sender = "donotreply.fifa2018newsletter@gmail.com", recipients = [email])
+            msg.body = mailBody
+            mail.send(msg)
             conn = mysql.connect()
             cur = conn.cursor()
             sql = "INSERT INTO tbl_users (name,email,password) VALUES (%s, %s,%s)"
             cur.execute(sql, (name,email,password))
             conn.commit()
             conn.close()
-            # print "Success"
-
-
-        return render_template("join.html")
+            return render_template("join.html",msg="You have subscribed!! Check Email")
+        else:
+            return render_template("join.html",msg="")
 
     @app.route('/player_stats', methods = ['GET', 'POST'])
     def player():

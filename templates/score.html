@@ -1,187 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>FIFA World Cup</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">FIFA</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li ><a href="/index">Home</a></li>
-        <li class="active"><a href="/join">Join</a></li>
-        <li><a href="/predict">Predict</a></li>
-          <li><a href="/videos">Videos</a></li>
-        <li class="active"><a href="/score">Score</a></li>
-          <li><a href="/player_stats">Player Statistics</a></li>
-        <li><a href="/team_stats">Team Statistics</a></li>
-        <li><a href="/destination">Match Location</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<div style="margin-top:2%;" class="container">
-	<div class="row">
-        <div class="col-md-12">
-    		<div class="menu">
-                <div class="panel-group">
-            		<div class="panel-heading panel-default">
-            			<div class="panel-heading country">
-                          <img src="http://placehold.it/100x30" alt="country flag" style="margin: 3px 10px 0 3px; text-align:center;"/>
-            				<a class="panel-toggle" data-toggle="collapse" href="#country1">Group A</a>
-            			</div>
-            			<div id="country1" class="panel-collapse collapse">
-            				<div class="panel-body">
-            					<table class="table table-striped table-condensed">
-            						<thead>
-            							<tr>
-            								<th>Team</th>
-            								<th>MP</th>
-            								<th>W</th>
-            								<th>L</th>
-            								<th>GF</th>
-            								<th>GA</th>
-            								<th>Pts</th>
-            							</tr>
-            						</thead>
-            						<tbody>
-            							<tr>
-            								<td>Russia</td>
-            								<td>3</td>
-            								<td>1</td>
-            								<td>2</td>
-            								<td>3</td>
-            								<td>5</td>
-            								<td>3</td>
-            							</tr>
-            							<tr>
-            								<td>Brazil</td>
-            								<td>4</td>
-            								<td>2</td>
-            								<td>1</td>
-            								<td>5</td>
-            								<td>2</td>
-            								<td>6</td>
-            							</tr>
-            						</tbody>
-            					</table>
-            				</div>
-            			</div>
-            			<div class="panel-heading country">
-                          <img src="http://placehold.it/100x30" alt="country flag" style="margin: 3px 10px 0 3px; text-align:center;"/>
-            				<a class="accordion-toggle" data-toggle="collapse" href="#country2">Group B</a>
-            			</div>
-            			<div id="country2" class="panel-collapse collapse">
-            				<div class="panel-body">
-            					<table class="table table-striped table-condensed">
-            						<thead>
-            							<tr>
-            								<th>Team</th>
-            								<th>MP</th>
-            								<th>W</th>
-            								<th>L</th>
-            								<th>GF</th>
-            								<th>GA</th>
-            								<th>Pts</th>
-            							</tr>
-            						</thead>
-            						<tbody>
-            							<tr>
-            								<td>Site-1</td>
-            								<td>123</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>OK</td>
-            							</tr>
-            							<tr>
-            								<td>Site-2</td>
-            								<td>321</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>OK</td>
-            							</tr>
-            						</tbody>
-            					</table>
-            				</div>
-            			</div>
-            			<div class="panel-heading country">
-                          <img src="http://placehold.it/100x30" alt="country flag" style="margin: 3px 10px 0 3px; text-align:center;"/>
-            				<a class="panel-toggle" data-toggle="collapse" href="#country3">Group C</a>
-            			</div>
-            			<div id="country3" class="panel-collapse collapse">
-            				<div class="panel-body">
-            					<table class="table table-striped table-condensed">
-            						<thead>
-            							<tr>
-            								<th>Team</th>
-            								<th>MP</th>
-            								<th>W</th>
-            								<th>L</th>
-            								<th>GF</th>
-            								<th>GA</th>
-            								<th>Pts</th>
-            							</tr>
-            						</thead>
-            						<tbody>
-            							<tr>
-            								<td>Site-1</td>
-            								<td>123</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>OK</td>
-            							</tr>
-            							<tr>
-            								<td>Site-2</td>
-            								<td>321</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>-</td>
-            								<td>OK</td>
-            							</tr>
-            						</tbody>
-            					</table>
-            				</div>
-            			</div>
-            		</div>
-            	</div>
+    <head>
+        <title>FIFA World Cup</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index">FIFA</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="/index">Home</a></li>
+                        <li><a href="/join">Join</a></li>
+                        <li><a href="/predict">Predict</a></li>
+                        <li><a href="/videos">Videos</a></li>
+                        <li class="active"><a href="/score">Score</a></li>
+                        <li><a href="/player_stats">Player Statistics</a></li>
+                        <li><a href="/team_stats">Team Statistics</a></li>
+                        <li><a href="/destination">Match Location</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="margin-top:2%;" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="menu">
+                        <div class="panel-group">
+                            <div class="panel-heading panel-default">
+                                <div class="panel-heading country">
+                                    <a class="panel-toggle" data-toggle="collapse" href="#country1">Group A</a>
+                                </div>
+                                <div id="country1" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>MP</th>
+                                                    <th>W</th>
+                                                    <th>L</th>
+                                                    <th>GF</th>
+                                                    <th>GA</th>
+                                                    <th>Pts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Russia</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>5</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Brazil</td>
+                                                    <td>4</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>5</td>
+                                                    <td>2</td>
+                                                    <td>6</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel-heading country">
+                                    <a class="accordion-toggle" data-toggle="collapse" href="#country2">Group B</a>
+                                </div>
+                                <div id="country2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>MP</th>
+                                                    <th>W</th>
+                                                    <th>L</th>
+                                                    <th>GF</th>
+                                                    <th>GA</th>
+                                                    <th>Pts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Germany</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>1</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Portugal</td>
+                                                    <td>3</td>
+                                                    <td>2</td>
+                                                    <td>1</td>
+                                                    <td>4</td>
+                                                    <td>2</td>
+                                                    <td>6</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel-heading country">
+                                    <a class="panel-toggle" data-toggle="collapse" href="#country3">Group C</a>
+                                </div>
+                                <div id="country3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>MP</th>
+                                                    <th>W</th>
+                                                    <th>L</th>
+                                                    <th>GF</th>
+                                                    <th>GA</th>
+                                                    <th>Pts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Spain</td>
+                                                    <td>3</td>
+                                                    <td>3</td>
+                                                    <td>0</td>
+                                                    <td>5</td>
+                                                    <td>1</td>
+                                                    <td>9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>France</td>
+                                                    <td>3</td>
+                                                    <td>0</td>
+                                                    <td>3</td>
+                                                    <td>1</td>
+                                                    <td>5</td>
+                                                    <td>0</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel-heading country">
+                                    <a class="accordion-toggle" data-toggle="collapse" href="#country4">Group D</a>
+                                </div>
+                                <div id="country4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>Team</th>
+                                                    <th>MP</th>
+                                                    <th>W</th>
+                                                    <th>L</th>
+                                                    <th>GF</th>
+                                                    <th>GA</th>
+                                                    <th>Pts</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Egypt</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>5</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Croatia</td>
+                                                    <td>2</td>
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                    <td>5</td>
+                                                    <td>2</td>
+                                                    <td>6</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-	</div>
-</div>
-
-
-
-
-
-
-
-<footer class="container-fluid text-center">
-  <p>CSCI 5709 Advanced Topics in Web Development</p>
-</footer>
-
-</body>
+    </body>
 </html>

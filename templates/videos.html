@@ -1,74 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>FIFA World Cup</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">FIFA</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li ><a href="/index">Home</a></li>
-        <li class="active"><a href="/join">Join</a></li>
-        <li><a href="/predict">Predict</a></li>
-          <li  class="active"><a href="/videos">Videos</a></li>
-        <li><a href="/score">Score</a></li>
-          <li><a href="/player_stats">Player Statistics</a></li>
-        <li><a href="/team_stats">Team Statistics</a></li>
-        <li><a href="/destination">Match Location</a></li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-<div class="col-sm-9">
-<br>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/CUR1n1L_2wA" allowfullscreen></iframe>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Ryan Davis, Sep 29, 2018.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
-
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/0Xf3lK9KdCQ" allowfullscreen></iframe>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Morgan Doe, July 24, 2018.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-
-
-      <hr>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ITdPTKpGHuI" allowfullscreen></iframe>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Rohit Gs, Sep 24, 2015.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-
-      <hr>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/oz05w9thcGI"  allowfullscreen></iframe>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by Don Draper, Feb 21, 2012.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <hr>
-
-    
-</body>
+    <head>
+        <title>FIFA World Cup</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index">FIFA</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="/index">Home</a></li>
+                        <li><a href="/join">Join</a></li>
+                        <li><a href="/predict">Predict</a></li>
+                        <li  class="active"><a href="/videos">Videos</a></li>
+                        <li><a href="/score">Score</a></li>
+                        <li><a href="/player_stats">Player Statistics</a></li>
+                        <li><a href="/team_stats">Team Statistics</a></li>
+                        <li><a href="/destination">Match Location</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="col-sm-9">
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CUR1n1L_2wA" allowfullscreen></iframe>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by Ryan Davis, Sep 29, 2018.</h5>
+            <h5><span class="label label-danger">Pele</span> <span class="label label-primary">Legend</span></h5>
+            <p>Pelé began playing for Santos at age 15 and the Brazil national team at 16. During his international career, he won three FIFA World Cups: 1958, 1962 and 1970, being the only player ever to do so. Pelé is the all-time leading goalscorer for Brazil with 77 goals in 92 games. At club level he is the record goalscorer for Santos, and led them to the 1962 and 1963 Copa Libertadores. Pelé's "electrifying play and penchant for spectacular goals" made him a star around the world, and his teams toured internationally in order to take full advantage of his popularity. Since retiring in 1977, Pelé has been a worldwide ambassador for football and has made many acting and commercial ventures. In 2010, he was named the Honorary President of the New York Cosmos.</p>
+            <hr>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0Xf3lK9KdCQ" allowfullscreen></iframe>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by Morgan Doe, July 24, 2018.</h5>
+            <h5><span class="label label-success">Skills</span></h5>
+            <p>That famous knuckleball from the old Ronaldo probably was. The keeper, commentators and fans were all mind blown so I guess that was the first or at least one of the first on TV. The old leather balls were heavy and hard which meant that spinning the ball was very difficult. If you haven't seen Rinaldo's kick then take a look. Long before of Ronaldo there were players who shot with this technique, one of them i rember is Ludo Coeck, too bad he died at only 30 in a car crash. On youtube you can find some footage of him.</p>
+            <hr>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ITdPTKpGHuI" allowfullscreen></iframe>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by Rohit Gs, Sep 24, 2015.</h5>
+            <h5><span class="label label-success">Zidane</span></h5>
+            <p>In the 2006 World Cup Final, France’s best player Zinedine Zidane was shown a red card after headbutting Italian midfielder Marco Materazzi in the chest. It was a moment France will never forget, and Italy wound up winning the match in penalty kicks.For years, the general line was that Materazzi had insulted Zidane’s mother, which caused him to fly off the handle. Materazzi never confirmed that, but also never clarified what he did say. This week, the 10th anniversary of the match, Materazzi — who is writing a book about his life — finally came clean.It wasn’t Zidane’s mother he spoke about. It was Zidane’s sister.</p>
+            <hr>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oz05w9thcGI"  allowfullscreen></iframe>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by Don Draper, Feb 21, 2012.</h5>
+            <h5><span class="label label-success">Action</span></h5>
+            <P>Football is a family of team sports that involve, to varying degrees, kicking a ball with a foot to score a goal. Unqualified, the word football is understood to refer to whichever form of football is the most popular in the regional context in which the word appears. Sports commonly called football in certain places include association football (known as soccer in some countries); gridiron football (specifically American football or Canadian football); Australian rules football; rugby football (either rugby league or rugby union); and Gaelic football.These different variations of football are known as football codes</P>
+            <hr>
+        </div>
+    </body>
 </html>

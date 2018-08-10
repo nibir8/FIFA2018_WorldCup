@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__)) + "/Datasets/"
 
 class predictor():
     def __init__(self):
@@ -15,7 +17,7 @@ class predictor():
                 return "Loss"
             elif x['Home Team Goals'] == x['Away Team Goals']:
                 return "Draw"
-        matches = pd.read_csv(r"Datasets\world_cup\WorldCupMatches.csv")
+        matches = pd.read_csv(dir_path + "WorldCupMatches.csv")
         matches.drop_duplicates(inplace=True)
         matches.Year.value_counts(sort=False)
         matches.Attendance.fillna( np.max(matches[(matches.Year == 2014) & (matches.Stadium == 'Estadio Beira-Rio')].dropna().Attendance), inplace=True )
@@ -27,4 +29,3 @@ class predictor():
         feed = np.array([predict_this["hg"],predict_this["attendance"],predict_this["hthg"],predict_this["htag"]]).reshape(1,-1)
         response = rf.predict(feed)
         return response[0]
-

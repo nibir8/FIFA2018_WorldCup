@@ -9,6 +9,11 @@
     function toggleTable1(id) {
       var x = document.getElementById("table1");
       if (x.style.display === "none") {
+		  table2.style.display = "none";
+		  table3.style.display = "none";
+		  table4.style.display = "none";
+		  table5.style.display = "none";
+		  table6.style.display = "none";
           x.style.display = "block";
       } else {
           x.style.display = "none";
@@ -18,6 +23,11 @@
 function toggleTable2(table2) {
   var x = document.getElementById("table2");
   if (x.style.display === "none") {
+	  table1.style.display = "none";
+		  table3.style.display = "none";
+		  table4.style.display = "none";
+		  table5.style.display = "none";
+		  table6.style.display = "none";
       x.style.display = "block";
   } else {
       x.style.display = "none";
@@ -26,7 +36,12 @@ function toggleTable2(table2) {
 function toggleTable3(table3) {
   var x = document.getElementById("table3");
   if (x.style.display === "none") {
-      x.style.display = "block";
+ table1.style.display = "none";
+		  table2.style.display = "none";
+		  table4.style.display = "none";
+		  table5.style.display = "none";
+		  table6.style.display = "none";     
+		  x.style.display = "block";
   } else {
       x.style.display = "none";
   }
@@ -34,7 +49,12 @@ function toggleTable3(table3) {
 function toggleTable4(table4) {
   var x = document.getElementById("table4");
   if (x.style.display === "none") {
-      x.style.display = "block";
+ table1.style.display = "none";
+		  table2.style.display = "none";
+		  table3.style.display = "none";
+		  table5.style.display = "none";
+		  table6.style.display = "none"; 
+  x.style.display = "block";
   } else {
       x.style.display = "none";
   }
@@ -43,15 +63,25 @@ function toggleTable4(table4) {
 function toggleTable5(table5) {
   var x = document.getElementById("table5");
   if (x.style.display === "none") {
+	   table1.style.display = "none";
+		  table2.style.display = "none";
+		  table3.style.display = "none";
+		  table4.style.display = "none";
+		  table6.style.display = "none"; 
       x.style.display = "block";
   } else {
       x.style.display = "none";
   }
 }
-function toggleTable5(table6) {
+function toggleTable6(table6) {
   var x = document.getElementById("table6");
   if (x.style.display === "none") {
-      x.style.display = "block";
+ table1.style.display = "none";
+		  table2.style.display = "none";
+		  table3.style.display = "none";
+		  table4.style.display = "none";
+		  table5.style.display = "none"; 
+  x.style.display = "block";
   } else {
       x.style.display = "none";
   }

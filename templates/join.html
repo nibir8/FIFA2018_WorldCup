@@ -1,93 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>FIFA World Cup</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">FIFA</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li ><a href="/index">Home</a></li>
-        <li class="active"><a href="/join">Join</a></li>
-        <li><a href="/predict">Predict</a></li>
-          <li><a href="/videos">Videos</a></li>
-        <li><a href="/score">Score</a></li>
-          <li><a href="/player_stats">Player Statistics</a></li>
-        <li><a href="/team_stats">Team Statistics</a></li>
-        <li><a href="/destination">Match Location</a></li>
-
-      </ul>
-    </div>
-  </div>
-</nav>
-
-	<div class="container">
-						<div class="signin-form profile join-fm">
-							<h3 class="sign">Join Now - Get the Latest Updates!!</h3>
-							<div class="login-form">
-								<form action="#" method="post" onsubmit="alert('Successful');">
-									<input type="text" name="name" placeholder="Name" required="">
-									<input type="email" name="email" placeholder="Email" required="">
-									<input type="password" name="password" placeholder="Password" required="">
-									<input type="submit" value="Subscribe">
-								</form>
-							</div>
-						</div>
-	</div>
-
-		<div class="container">
-			<h1 style="text-align:center;margin-top:4%;margin-bottom:3%;" class="bold">Top Scorers</h1>
-			<div>
-				<div class="col-md-3">
-					<img src="../static/images/t1.jpg" alt=" " class="img-responsive" />
-					<h3>Cristiano Ronaldo </h3>
-					<p>8 goals</p>
-
-
-				</div>
-				<div class="col-md-3 team_grid_info" data-aos="fade-up">
-					<img src="../static/images/t2.jpg" alt=" " class="img-responsive" />
-					<h3>Lionel Messi </h3>
-					<p>6 Goals</p>
-
-
-				</div>
-				<div class="col-md-3 team_grid_info" data-aos="fade-down">
-					<img src="../static/images/t3.jpg" alt=" " class="img-responsive" />
-					<h3>Neymar</h3>
-					<p>5 Goals</p>
-
-				</div>
-				<div class="col-md-3 team_grid_info" data-aos="fade-right">
-					<img src="../static/images/t4.jpg" alt=" " class="img-responsive" />
-					<h3>Harry Kane </h3>
-					<p>3 Goals</p>
-
-
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-
-<footer style="margin-top:3%;" class="container-fluid text-center">
-  <p>CSCI 5709 Advanced Topics in Web Development</p>
-</footer>
-</body>
-
+    <head>
+        <title>FIFA World Cup</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index">FIFA</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li ><a href="/index">Home</a></li>
+                        <li class="active"><a href="/join">Join</a></li>
+                        <li><a href="/predict">Predict</a></li>
+                        <li><a href="/videos">Videos</a></li>
+                        <li><a href="/score">Score</a></li>
+                        <li><a href="/player_stats">Player Statistics</a></li>
+                        <li><a href="/team_stats">Team Statistics</a></li>
+                        <li><a href="/destination">Match Location</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="signin-form profile join-fm">
+                <h3 class="sign">Join Now - Get the Latest Updates!!</h3>
+                <div class="login-form">
+                    <form action="#" method="post" onsubmit="alert('Successful');">
+                        <input type="text" name="name" placeholder="Name" required="">
+                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="password" name="password" placeholder="Password" required="">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                    <p style="margin-top:2%; color:red;">{{msg}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom:3%;">
+            <h1 style="text-align:center;margin-top:4%;margin-bottom:3%;" class="bold">Top Scorers</h1>
+            <div>
+                <div class="col-md-3">
+                    <img src="../static/images/t1.jpg" alt=" " class="img-responsive" />
+                    <h3>Cristiano Ronaldo </h3>
+                    <p>8 goals</p>
+                </div>
+                <div class="col-md-3 team_grid_info" data-aos="fade-up">
+                    <img src="../static/images/t2.jpg" alt=" " class="img-responsive" />
+                    <h3>Lionel Messi </h3>
+                    <p>6 Goals</p>
+                </div>
+                <div class="col-md-3 team_grid_info" data-aos="fade-down">
+                    <img src="../static/images/t3.jpg" alt=" " class="img-responsive" />
+                    <h3>Neymar</h3>
+                    <p>5 Goals</p>
+                </div>
+                <div class="col-md-3 team_grid_info" data-aos="fade-right">
+                    <img src="../static/images/t4.jpg" alt=" " class="img-responsive" />
+                    <h3>Harry Kane </h3>
+                    <p>3 Goals</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </body>
 </html>
