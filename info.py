@@ -23,7 +23,7 @@ class info():
         pinfo =  info[column_names].reset_index().to_dict()
 
         new_info = {}
-        skills = ['Acceleration','Ball Control','Dribbling','Stamina','Dribbling','Crossing']
+        skills = ['Acceleration','Crossing','Dribbling','Stamina','Finishing','Stamina']
         new_info["id"]=pinfo["Name"][0]
         list_of_skills = []
         for skill in skills:
