@@ -7,14 +7,24 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="{{url_for('static', filename='../static/css/style.css') }}">
-<link rel="stylesheet" href="{{url_for('static', filename='../static/css/rad.css') }}">
-   <script src="https://d3js.org/d3.v4.min.js"></script>
-   <script src="https://d3js.org/topojson.v1.min.js"></script>
-   <script src="https://d3js.org/queue.v1.min.js"></script>
+   <script src="http://d3js.org/d3.v4.min.js"></script>
+   <script src="http://d3js.org/topojson.v1.min.js"></script>
+   <script src="http://d3js.org/queue.v1.min.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="{{url_for('static', filename='js/player_info.js') }}"></script>
+<style>
+svg
+{
+   display: inline-block;
+	position: relative;
+	width: 60%;
+	left: 20%;
+	padding-bottom: 100%; 
+	vertical-align: middle; 
+	overflow: hidden;
+}
+</style>
 </head>
 <body>
 
@@ -43,21 +53,7 @@
   </div>
 </nav>
 
-<div style="text-align:center; margin-top:2%;">
-<button  id = "K. Mbappé" class="player">K. Mbappé</button>
-<button  id = "Neymar" class="player">Neymar</button>
-<button  id = "Cristiano Ronaldo" class="player">C. Ronaldo</button>
-<button  id = "L. Messi" class="player">L. Messi</button>
-<button  id = "E. Hazard" class="player">E. Hazard</button>
-<button  id = "P. Pogba" class="player">P. Pogba</button>
-<button  id = "H. Kane" class="player">H. Kane</button>
-<button  id = "L. Modrić" class="player">L. Modric</button>
-<button  id = "K. De Bruyne" class="player">K. De Bruyne</button>
-<button  id = "E. Cavani" class="player">E. Cavani</button>
-<button  id = "Sergio Ramos" class="player">S. Ramos</button>
-<button  id = "B. Pavard" class="player">B. Pavard</button>
-</div>
-<div style=" margin-top: 10px">
+<div style=" margin-top: 3%">
         <table id="player_table" style="width:100%" border="5">
         <tr>
             <td>Acceleration</td>
@@ -94,5 +90,19 @@
         </table>
 </div>
 
+<div style="text-align:center; margin-top:1%;">
+<button  id = "K. Mbappé" class="player">K. Mbappé</button>
+<button  id = "Neymar" class="player">Neymar</button>
+<button  id = "Cristiano Ronaldo" class="player">C. Ronaldo</button>
+<button  id = "L. Messi" class="player">L. Messi</button>
+<button  id = "E. Hazard" class="player">E. Hazard</button>
+<button  id = "P. Pogba" class="player">P. Pogba</button>
+<button  id = "H. Kane" class="player">H. Kane</button>
+<button  id = "L. Modrić" class="player">L. Modric</button>
+<button  id = "K. De Bruyne" class="player">K. De Bruyne</button>
+<button  id = "E. Cavani" class="player">E. Cavani</button>
+<button  id = "Sergio Ramos" class="player">S. Ramos</button>
+<button  id = "B. Pavard" class="player">B. Pavard</button>
+</div>
 </body>
 </html>
