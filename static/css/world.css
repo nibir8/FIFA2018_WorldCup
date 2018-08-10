@@ -6,6 +6,7 @@ svg
   left: 50%;
   transform: translate(-50%, -50%);
   display: block;
+  margin: auto;
 }
 .water {
   fill: #00248F;
@@ -49,8 +50,7 @@ select {
 }
 .Earthglobe
 {
-  width: 1000vh;
-  height: 130vh;
+  height: 600px;
   margin-top: 15vh;
 }
 #pointstable {
