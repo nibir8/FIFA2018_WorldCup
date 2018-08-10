@@ -27,16 +27,16 @@ app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
 
-#app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
-#app.config['MYSQL_DATABASE_USER'] = 'rohit'
-#app.config['MYSQL_DATABASE_PASSWORD'] = 'B00779758'
-#app.config['MYSQL_DATABASE_DB'] = 'rohit'
+app.config['MYSQL_DATABASE_HOST'] = 'db.cs.dal.ca'
+app.config['MYSQL_DATABASE_USER'] = 'rohit'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'B00779758'
+app.config['MYSQL_DATABASE_DB'] = 'rohit'
 
 
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
-app.config['MYSQL_DATABASE_DB'] = 'Group20'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_DATABASE_PASSWORD'] = 'root'
+# app.config['MYSQL_DATABASE_DB'] = 'Group20'
 mysql.init_app(app)
 
 class App():
