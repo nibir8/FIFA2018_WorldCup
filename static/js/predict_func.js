@@ -32,10 +32,9 @@ $('#drop1 li').click(function(){
         data: features,
         type: 'POST',
         success: function (response) {
-		document.getElementById('result').style.display = "block";
           var container= $("#result");
           var p = $("<p>");
-          p.text("Predicted Result for "+c+" : "+ response);
+          p.text("Predicted Result :"+response);
           container.append(p);
         },
         error: function (error) {
