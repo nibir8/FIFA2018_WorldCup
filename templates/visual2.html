@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>FIFA World Cup</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="{{url_for('static', filename='js/team_info.js') }}"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="{{url_for('static', filename='css/world.css') }}">
-   <script src="https://d3js.org/d3.v4.min.js"></script>
-   <script src="https://d3js.org/topojson.v1.min.js"></script>
-   <script src="https://d3js.org/queue.v1.min.js"></script>
-   <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-	<style>
-	table, thead, tbody, tfoot, tr, th, td {
-    display: block; /* Set all of our table elements to display type block */
-}
- 
-/* And here we will set our table to act normally after we hit 1024px */
-@media only screen and (min-width: 1024px) {
-    table { display: table; }
-    thead { display: table-header-group; }
-    tbody { display: table-row-group; }
-    tfoot { display: table-footer-group; }
-    tr { display: table-row; }
-    th, td { display: table-cell; }
-}
-	</style>
-   </head>
-
-<body>
-
-      <nav class="navbar navbar-inverse">
+    <head>
+        <title>FIFA World Cup</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{{url_for('static', filename='js/team_info.js') }}"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/world.css') }}">
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://d3js.org/queue.v1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <style>
+            table, thead, tbody, tfoot, tr, th, td {
+            display: block; /* Set all of our table elements to display type block */
+            }
+            /* And here we will set our table to act normally after we hit 1024px */
+            @media only screen and (min-width: 1024px) {
+            table { display: table; }
+            thead { display: table-header-group; }
+            tbody { display: table-row-group; }
+            tfoot { display: table-footer-group; }
+            tr { display: table-row; }
+            th, td { display: table-cell; }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -56,36 +53,16 @@
                 </div>
             </div>
         </nav>
-   <div style="margin-top:5%;" class="game_info" data-spy="scroll" data-target=".game_info">
-
-      <div class="Earthglobe">
-
-		  <script src="{{url_for('static', filename='js/globe_earth.js') }}"></script>
- 
-      </div>
-</div>
-         <div  class="container" id = "pointstable">
-                        <table style="overflow-x:auto;" border="1" class="table table-hover" id ="roster">
-                            <thead>
-                            <tr>
-                                <th>Group</th>
-                                 <th>Index</th>
-                                 <th>Team</th>
-                                 <th>DOB</th>
-                                 <th>Name</th>
-                                 <th>Club</th>
-                                 <th>Age</th>
-                                  <th>Squad #</th>
-                                  <th>Caps</th>
-                                  <th>Goals</th>
-                                  <th>Position</th>
-
-                              </tr>
-                            </thead>
-
-                        </table>
+        <div style="margin-top:5%;" class="game_info" data-spy="scroll" data-target=".game_info">
+            <div class="Earthglobe">
+                <script src="{{url_for('static', filename='js/globe_earth.js') }}"></script>
             </div>
-
-
-</body>
+        </div>
+        <div  class="container" id = "pointstable">
+            <table style="overflow-x:auto;" border="1" class="table table-hover" id ="roster">
+                <thead>
+                </thead>
+            </table>
+        </div>
+    </body>
 </html>
